@@ -196,6 +196,10 @@ Each tick broadcasts a full state snapshot including: core states, process queue
 - **Full state serialization** — Every service implements `toJSON()` and `restoreFromSnapshot()` for persistence
 - **Memory-mapped I/O** — Peripherals read/write fixed memory addresses, mimicking real hardware register-mapped devices
 
+## Contributions
+
+Leveraging GitHub Copilot, the NumPad and DisplayScreen peripherals were implemented. The peripherals were designed and implemented based on existing peripherals 
+
 ## License
 
 MIT

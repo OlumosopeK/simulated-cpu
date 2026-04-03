@@ -2,6 +2,8 @@
 
 A fully interactive CPU simulation with a real-time visual frontend. Built to demonstrate how a processor fetches, decodes, and executes instructions — complete with multi-core scheduling, interrupt handling, memory-mapped I/O, and pluggable peripherals.
 
+Using the object-oriented principles of inheritance and polymorphism, I designed and implemented the numpad and display screen peripherals. In addition, frontend representations were implemented and added to the existing peripheral.
+
 ## Overview
 
 The simulation models a **dual-core 8-bit CPU** with a configurable clock speed, 1 KB of byte-addressable memory, and a set of peripherals that communicate via interrupts and memory-mapped registers. A WebSocket server bridges the backend simulation to a React Flow-based visual canvas, where you can watch data flow between the CPU, memory, and peripherals in real time.
@@ -195,10 +197,6 @@ Each tick broadcasts a full state snapshot including: core states, process queue
 - **Separation of concerns** — Services are pure TypeScript with no framework dependencies; the frontend is a read-only view with action dispatch
 - **Full state serialization** — Every service implements `toJSON()` and `restoreFromSnapshot()` for persistence
 - **Memory-mapped I/O** — Peripherals read/write fixed memory addresses, mimicking real hardware register-mapped devices
-
-## Contributions
-
-Leveraging GitHub Copilot, the NumPad and DisplayScreen peripherals were implemented. The peripherals were designed and implemented based on existing peripherals 
 
 ## License
 
